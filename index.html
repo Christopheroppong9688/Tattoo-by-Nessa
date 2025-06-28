@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tattoo by Nessa | Luxury Tattoo Studio | Accra, Ghana</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* All your CSS remains unchanged */
+        :root {
+            --primary: #D4AF37;
+            --dark: #1a1a1a;
+            --light: #f5f5f5;
+            --accent: #8a0303;
+            --text: #333;
+            --transition: all 0.4s ease;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            display: inline-block;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 30px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 0;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .btn:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: var(--transition);
+            background: rgba(26, 26, 26, 0.95);
+        }
+
+        header.scrolled {
+            padding: 10px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            position: relative;
+            padding: 5px 0;
+            transition: var(--transition);
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover:after,
+        .nav-links a.active:after {
+            width: 100%;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .book-now-btn {
+            background-color: var(--accent);
+            color: var(--light);
+            width: 120px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+                
+        .book-now-btn:hover {
+            color: var(--dark);
+            transform: translateY(-2px);
+        }
+
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            position: relative;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: white;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* About Section */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 50px;
+        }
+        .about .section-title h2{
+            color: var(--text);
+        }
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+
+        .about-image:before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            border: 2px solid var(--primary);
+            z-index: -1;
+        }
+
+        .about-image img {
+            width: 100%;
+            display: block;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .info-item i {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-right: 15px;
+        }
+
+
+        .portfolio{
+            background-color: var(--dark);
+        }
+        .section-title h2 {
+            color: var(--light);
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+                
+        .portfolio-item {
+            height: 250px;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+                
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+                
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+                
+        .portfolio-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: var(--transition);
+        }
+                
+        .portfolio-item:hover::after {
+            opacity: 1;
+        }
+                
+
+        .booking {
+            background: linear-gradient(rgba(249, 246, 242, 0.9), rgba(249, 246, 242, 0.9));
+        }
+
+        .booking .section-title h2{
+            color: #1a1a1a;
+        }
+
+        .booking-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+        }
+
+        .booking-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .booking-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .hours-list {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .booking-form {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background-color: var(--dark);
+            color: white;
+        }
+                
+        .contact-container {
+            display: flex;
+            gap: 50px;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .contact-info p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            max-width: 500px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            gap: 15px;
+        }
+
+        .info-item i {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-top: 5px;
+            min-width: 24px;
+        }
+
+        .info-item div h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+
+        .info-item div p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .map {
+            flex: 1;
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--accent);
+            color: var(--light);
+            border-radius: 50%;
+            transition: var(--transition);
+            font-size: 1.1rem;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .contact-container {
+                gap: 40px;
+            }
+                    
+            .section-header h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact {
+                padding: 80px 0;
+            }
+                    
+            .contact-container {
+                flex-direction: column;
+                gap: 40px;
+            }
+                    
+            .map {
+                height: 350px;
+                order: -1;
+            }
+                    
+            .section-header {
+                margin-bottom: 40px;
+            }
+                    
+            .section-header h2 {
+                font-size: 2rem;
+            }
+                    
+            .contact-info h3 {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .contact {
+                padding: 60px 0;
+            }
+                    
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+                    
+            .map {
+                height: 300px;
+            }
+                    
+            .info-item {
+                flex-direction: column;
+                gap: 8px;
+            }
+                    
+            .social-links {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-header h2 {
+                font-size: 1.6rem;
+            }
+                    
+            .contact-info h3 {
+                font-size: 1.4rem;
+            }
+                    
+            .info-item div h4 {
+                font-size: 1.1rem;
+            }
+                    
+            .map {
+                height: 250px;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .contact-info.animate-on-scroll {
+            animation-delay: 0.2s;
+        }
+
+        .map.animate-on-scroll {
+            animation-delay: 0.4s;
+        }
+
+                
+        /* Footer */
+        footer {
+            background: #8a0303;
+            color: var(--light);
+            padding: 60px 0 30px;
+        }
+                
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+                
+        .footer-col {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+                
+        .footer-col h4 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+                
+        .footer-col p, .footer-col a {
+            color: #aaa;
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+                
+        .footer-col a:hover {
+            color: var(--primary);
+        }
+        .contact-inf {
+            list-style: none;
+        }
+        
+        .contact-inf li {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .contact-inf i {
+            color: var(--primary);
+            margin-right: 15px;
+            font-size: 1.1rem;
+            margin-top: 5px;
+        }
+        
+        .contact-inf a {
+            color: var(--light);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-inf a:hover {
+            color: var(--primary);
+        }
+                
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+                
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--light);
+            transition: all 0.3s;
+        }
+                
+        .social-links a:hover {
+            background: var(--primary);
+            color: var(--dark);
+        }
+                
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        /* modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+                
+        .modal-content {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+                
+        .modal-content h2 {
+            color: #D4AF37;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+                
+        .modal-content p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+                
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+                
+        .close-modal:hover {
+            color: #8a0303;
+            transform: rotate(90deg);
+        }
+                
+        /* Validation error styling */
+        .error-message {
+            color: #8a0303;
+            font-size: 0.85rem;
+            margin-top: 5px;
+            display: none;
+        }
+                
+        .error {
+            border-color: #8a0303 !important;
+        }
+                
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+                    
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+                color: white;
+                font-size: 1.5rem;
+            }
+                    
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: var(--primary);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 50px;
+                transition: var(--transition);
+            }
+                    
+            .nav-links.active {
+                left: 0;
+            }
+                    
+            .nav-links li {
+                margin: 20px 0;
+            }
+                    
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+                    
+            .hero p {
+                font-size: 1rem;
+            }
+                    
+            section {
+                padding: 60px 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+                    
+            .about-image:before {
+                display: none;
+            }
+                    
+            .booking-form {
+                padding: 30px 20px;
+            }
+                    
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container navbar">
+            <a href="#" class="logo">Tattoo by <span>Nessa</span></a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#booking" class="book-now-btn">Book Now</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Luxury Tattoo Artistry in the Heart of Accra</h1>
+            <p>Experience bespoke tattoo creations by Ghana's premier female tattoo artist. Where artistry meets skin.</p>
+            <a href="#booking" class="btn">Book Your Session</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet The Artist</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Nessa - Tattoo Artist">
+                </div>
+                <div class="about-text">
+                    <h3>Nessa: Visionary Ink Specialist</h3>
+                    <p>With over 8 years of professional experience, Nessa has established herself as one of Ghana's most sought-after tattoo artists. Her journey began in London where she trained under world-renowned masters before bringing her unique style back to her homeland.</p>
+                    <p>Specializing in fine line, realism, and custom designs, Nessa approaches each piece as a collaborative art project. Her studio in Adenta is a sanctuary for creativity, designed to make your tattoo experience as exceptional as the art you'll wear forever.</p>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-medal"></i>
+                            <div>
+                                <h4>Award Winning</h4>
+                                <p>3-time Ghana Ink Master</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-stethoscope"></i>
+                            <div>
+                                <h4>Health Certified</h4>
+                                <p>Sterile & Safe Environment</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-paint-brush"></i>
+                            <div>
+                                <h4>Custom Designs</h4>
+                                <p>Personalized for each client</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-heart"></i>
+                            <div>
+                                <h4>Client Focused</h4>
+                                <p>500+ satisfied clients</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Work</h2>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Tattoo Design">
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Tattoo Art">
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1613051889946-9e91dcce354d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Tattoo Detail">
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1596276020266-4f4d2a7f0a85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Tattoo Art">
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Tattoo Work">
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Tattoo Art">
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1596276020266-4f4d2a7f0a85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Tattoo Design">
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://images.unsplash.com/photo-1613051889946-9e91dcce354d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Tattoo Work">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking" id="booking">
+        <div class="container">
+            <div class="section-title">
+                <h2>Book Your Session</h2>
+            </div>
+            <div class="booking-container">
+                <div class="booking-info">
+                    <h3>Appointment Details</h3>
+                    <p>Ready to begin your tattoo journey? Fill out the consultation form and we'll contact you within 24 hours to discuss your ideas and schedule your session.</p>
+                    
+                    <h3>Studio Hours</h3>
+                    <ul class="hours-list">
+                        <li><span>Monday</span> <span>8:00 AM - 7:00 PM</span></li>
+                        <li><span>Tuesday</span> <span>8:00 AM - 7:00 PM</span></li>
+                        <li><span>Wednesday</span> <span>8:00 AM - 7:00 PM</span></li>
+                        <li><span>Thursday</span> <span>8:00 AM - 7:00 PM</span></li>
+                        <li><span>Friday</span> <span>8:00 AM - 7:00 PM</span></li>
+                        <li><span>Saturday</span> <span>8:00 AM - 7:00 PM</span></li>
+                        <li><span>Sunday</span> <span>Closed</span></li>
+                    </ul>
+                    
+                    <p><strong>Note:</strong> A non-refundable deposit is required to secure your booking. Consultations are free and highly recommended for custom designs.</p>
+                </div>
+                
+                <div class="booking-form">
+                    <form id="appointmentForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                            <div class="error-message" id="name-error">Please enter your full name</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                            <div class="error-message" id="email-error">Please enter a valid email address</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required>
+                            <div class="error-message" id="phone-error">Please enter a valid phone number</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Preferred Date</label>
+                            <input type="date" id="date" name="date" class="form-control" required>
+                            <div class="error-message" id="date-error">Please select a valid date (Mon-Sat only)</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Preferred Time</label>
+                            <select id="time" name="time" class="form-control" required>
+                                <option value="">Select Time</option>
+                                <option value="morning">Morning (8am-12pm)</option>
+                                <option value="afternoon">Afternoon (12pm-4pm)</option>
+                                <option value="evening">Evening (4pm-7pm)</option>
+                            </select>
+                            <div class="error-message" id="time-error">Please select a time slot</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="design">Tattoo Description</label>
+                            <textarea id="design" name="design" class="form-control" placeholder="Describe your design idea, placement, size, and any references..."></textarea>
+                        </div>
+                        <button type="submit" class="btn">Request Appointment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact <span>Us</span></h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info animate-on-scroll">
+                    <h3>Get In Touch</h3>
+                    <p>We'd love to hear from you. Reach out to us for any inquiries or to schedule your appointment.</p>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>050 994 1146</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>christopheroppong4170@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Kwabenya, Accra, Ghana</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Working Hours</h4>
+                            <p>Monday - Saturday: 9:00 AM - 8:00 PM</p>
+                            <p>Sunday: Closed</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="map animate-on-scroll">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.8146340748044!2d-0.1550625!3d5.739812499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf77003c8ed559%3A0xc1ca6e0b4332f30c!2sTATTOO%20BY%20NESSA!5e0!3m2!1sen!2sgh!4v1750704993185!5m2!1sen!2sgh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h4>Tattoo by Nessa</h4>
+                    <p>Luxury tattoo studio in the heart of Accra, specializing in custom, elegant tattoo designs with a focus on hygiene and client experience.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#about">About Nessa</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#booking">Book Appointment</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-inf">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Kwabenya, Accra, Ghana</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:+233509941146">050 994 1146</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:christopheroppong4170@gmail.com">christopheroppong4170@gmail.com</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Tattoo by Nessa. All Rights Reserved. Designed with passion in Accra, Ghana.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Thank You Modal -->
+    <div class="modal" id="thankYouModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Thank You!</h2>
+            <p>Thank you for your booking request! Nessa will contact you within 24 hours to confirm your appointment.</p>
+        </div>
+    </div>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile navigation
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+
+        // Form validation and submission
+        const form = document.getElementById('appointmentForm');
+        const modal = document.getElementById('thankYouModal');
+        const closeModal = document.querySelector('.close-modal');
+        
+        // Function to validate the form
+        function validateForm() {
+            let isValid = true;
+            
+            // Reset errors
+            document.querySelectorAll('.error-message').forEach(el => {
+                el.style.display = 'none';
+            });
+            document.querySelectorAll('.form-control').forEach(el => {
+                el.classList.remove('error');
+            });
+            
+            // Validate name
+            const name = document.getElementById('name');
+            if (!name.value.trim()) {
+                document.getElementById('name-error').style.display = 'block';
+                name.classList.add('error');
+                isValid = false;
+            }
+            
+            // Validate email
+            const email = document.getElementById('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value)) {
+                document.getElementById('email-error').style.display = 'block';
+                email.classList.add('error');
+                isValid = false;
+            }
+            
+            // Validate phone
+            const phone = document.getElementById('phone');
+            if (!phone.value.trim() || phone.value.length < 10) {
+                document.getElementById('phone-error').style.display = 'block';
+                phone.classList.add('error');
+                isValid = false;
+            }
+            
+            // Validate date
+            const dateInput = document.getElementById('date');
+            const selectedDate = new Date(dateInput.value);
+            const dayOfWeek = selectedDate.getDay(); // Sunday = 0, Monday = 1, etc.
+            
+            // Check if date is Sunday or in the past
+            const today = new Date();
+            today.setHours(0, 0, 0, 0); // Reset time to compare only dates
+            
+            if (!dateInput.value || dayOfWeek === 0 || selectedDate < today) {
+                document.getElementById('date-error').style.display = 'block';
+                dateInput.classList.add('error');
+                isValid = false;
+            }
+            
+            // Validate time
+            const timeSelect = document.getElementById('time');
+            if (!timeSelect.value) {
+                document.getElementById('time-error').style.display = 'block';
+                timeSelect.classList.add('error');
+                isValid = false;
+            }
+            
+            return isValid;
+        }
+        
+        // Form submission handler
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (validateForm()) {
+                // Prepare form data for FormSubmit
+                const formData = {
+                    _subject: "New Booking Request from Tattoo by Nessa",
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    date: document.getElementById('date').value,
+                    time: document.getElementById('time').value,
+                    design: document.getElementById('design').value
+                };
+                
+                // Send form data to FormSubmit
+                fetch('https://formsubmit.co/ajax/christopheroppong4170@gmail.com', {
+                    method: 'POST',
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // Show thank you modal
+                        modal.style.display = 'flex';
+                        form.reset();
+                    } else {
+                        alert('There was an error submitting your form. Please try again.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('There was an error submitting your form. Please try again.');
+                });
+            }
+        });
+        
+        // Close modal when clicking X
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+        
+        // Set min date for date picker to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('date').setAttribute('min', today);
+        
+        // Portfolio filtering (if needed later)
+        // ...
+    </script>
+</body>
+</html>
